@@ -7,7 +7,8 @@ import Link from "../src/Link";
 import ProTip from "../src/ProTip";
 import Copyright from "../src/Copyright";
 
-const Home: NextPage<{ toogleTheme: any, felipe: number }> = ({ toogleTheme }) => {
+// const Home: NextPage<{ toogleTheme: React.FC }> = ({ toogleTheme }) => {
+const Home: NextPage<{ toogleTheme: () => void }> = ({ toogleTheme }) => {
   return (
     <Container maxWidth="lg">
       <Box
