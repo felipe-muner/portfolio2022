@@ -2,13 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  webpack: (config) => {
-    // this will override the experiments
-    config.experiments = { ...config.experiments, ...{ topLevelAwait: true }};
-    // this will just update topLevelAwait property of config.experiments
-    // config.experiments.topLevelAwait = true 
-    console.log('config', config)
-    return config;
+  images: {
+    domains: ['jherr-pokemon.s3.us-west-1.amazonaws.com'],
   },
 }
 
