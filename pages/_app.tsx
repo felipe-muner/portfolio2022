@@ -19,8 +19,8 @@ export default function MyApp(props: MyAppProps) {
   const [activeTheme, setActiveTheme] = useState<Theme>(lightTheme);
 
   const toogleTheme = () =>
-    setActiveTheme((prevVal) =>
-      prevVal.palette.mode === "dark" ? lightTheme : darkTheme
+    setActiveTheme(({ palette: { mode } }) =>
+      mode === "dark" ? lightTheme : darkTheme
     );
 
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
